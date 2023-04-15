@@ -15,6 +15,7 @@ function  numbersGenerator() {
         let temporalNumber = Math.floor(Math.random() * 100)
         numbersArray.push(temporalNumber)
     }    
+    numbersArray.sort((a, b) => a - b)
 }
 
 function printNumbers () {
@@ -26,6 +27,7 @@ function printNumbers () {
         selectUl.appendChild(temporalLi)
         cantNumbers.value = "";
     }
+    
 
 }
 
