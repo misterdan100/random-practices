@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Heladeria</h1>
+    <fieldset>
+        <legend>Datos cliente</legend>
+        <label for="name">Nombre cliente:</label>
+        <input type="name" id="name" placeholder="Nombre...">
+        <br>
+
+        <label for="nummber">Telefono cliente:</label>
+        <input type="text" id="number" placeholder="333 111 22 44">
+        <br>
+
+        <label for="email">E-mail cliente:</label>
+        <input type="email" id="email" placeholder="example@example.com">
+        <br>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Elige tu sabor</legend>
+        <h3>Sabor</h3>
+        <input type="radio" name="sabor" id="vainilla" value="vainilla" checked>Vainilla<br>
+        <input type="radio" name="sabor" id="chocolate" value="chocolate">Chocolate<br>
+        <input type="radio" name="sabor" id="mixto" value="mixto">Mixto<br>
+
+        <h3>Recipiente</h3>
+        <input type="radio" name="recipiente" id="copa" value="copa" checked>Copa<br>
+        <input type="radio" name="recipiente" id="tarrina" value="plastico" >Plastico<br>
+
+        <h3>Extras</h3>
+        <input type="checkbox" name="extras[]" id="caramelo" value="caramelo">Caramelo<br>
+        <input type="checkbox" name="extras[]" id="kitkat" value="kitkat">Kitkat<br>
+        <input type="checkbox" name="extras[]" id="chocolateextra" value="chocolate">Chocolate<br>
+
+    </fieldset>
+    <button class="btn">Enviar</button>
+
+    <br>
+    <br>
+
+    <button class="btn-print">Mostrar pedidos</button>
+
+    <br>
+    <br>
+
+    <table class="table-container inactive">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Telefono</th>
+                <th>E-mail</th>
+                <th>Sabor</th>
+                <th>Recipiente</th>
+                <th>Extras</th>
+            </tr>
+        </thead>
+
+        <tbody class="table-body">
+            <!-- <tr>
+                <td>Danie</td>
+                <td>3107802775</td>
+                <td>merchan@gmail.com</td>
+                <td>Vainilla</td>
+                <td>Copa</td>
+                <td>Caramelo, kitkat</td>
+            </tr> -->
+
+
+        </tbody>
+    </table>
+
+    <script src="./script.js"></script>
+</body>
+</html>
