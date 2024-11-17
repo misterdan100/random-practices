@@ -1,17 +1,20 @@
 import { Link } from "react-router-dom";
+import { NoteList } from "../components/NoteList";
 
 export default function DashboardPage() {
   
   
   return (
     <div
-      className="px-4 w-full h-full flex flex-col gap-4"
+      className="flex flex-col w-full h-full gap-4 px-4"
     >
       <h3>You can, you are walking the path</h3>
 
+      <NoteList />
+
       <Link
         to={'/notes'}
-       className="w-fit mt-4 px-4 py-1 border border-yellow-400 rounded-lg hover:bg-yellow-500 hover:text-white transition duration-200 ease-in-out focus:outline-none"
+       className="px-4 py-1 mt-4 transition duration-200 ease-in-out border border-yellow-400 rounded-lg w-fit hover:bg-yellow-500 hover:text-white focus:outline-none"
       >
         See Notes
       </Link>

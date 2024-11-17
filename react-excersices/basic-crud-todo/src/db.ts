@@ -24,7 +24,7 @@ export const createNote = async (note: NoteForm) => {
     }
 }
 
-export const getAllNotes = async (): Promise<TNote[] | string> => {
+export const getAllNotes = async (): Promise<TNote[]> => {
 
     try {
         const apiURL = 'http://127.0.0.1:8090/api/collections/notes/records'
@@ -32,7 +32,7 @@ export const getAllNotes = async (): Promise<TNote[] | string> => {
         .then(data => data.json())
         .then(error => error)
         
-        if(resp.code === 404) return 'There was an error'
+        if(resp.code === 404) throw new Error('Error getting all notes')
         
         return resp.items
     } catch (error) {
