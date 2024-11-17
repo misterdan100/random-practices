@@ -55,3 +55,44 @@ export const deleteNote = async (id: string) => {
         throw new Error('Error deleting note')
     }
 }
+
+export const getNote = async (id: string): Promise<TNote> => {
+    try {
+        const url = `http://127.0.0.1:8090/api/collections/notes/records/${id}`
+
+        const resp = await fetch(url)
+                                .then(data => data.json())
+
+        return resp
+    } catch (error) {
+        throw new Error('Error getting note by ID')
+    }
+}
+
+interface EditData {
+    id: string
+    title: string
+    content: string
+}
+export const editNote = async ({id, title, content}: EditData): Promise<TNote> => {
+    try {
+        const url = `http://127.0.0.1:8090/api/collections/notes/records/${id}`
+        const resp = await fetch(url, {
+            method: 'PATCH',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                title,
+                content 
+            })
+        })
+
+        const data = resp.json()
+
+        return data
+        
+    } catch (error) {
+        throw new Error('Error editing note')
+    }
+}
