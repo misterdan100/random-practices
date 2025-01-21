@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+
+}
+
+.btn-primary {
+    @apply sm:inline-flex text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center transition-colors
+}
+
+.btn-secondary {
+    @apply sm:inline-flex text-gray-600  bg-gray-100 focus:ring-4 focus:ring-gray-200 hover:border-gray-400 hover:bg-gray-300 rounded-lg text-sm px-5 py-2.5 text-center items-center transition-colors
+}

@@ -1,4 +1,7 @@
 .vscode
+postgres
+.next
+
 
 ### Node ###
 # Logs

@@ -1,0 +1,6 @@
+-- AlterTable
+ALTER TABLE "Todo" ALTER COLUMN "description" DROP NOT NULL,
+ALTER COLUMN "dueDate" DROP NOT NULL,
+ALTER COLUMN "dueDate" DROP DEFAULT,
+ALTER COLUMN "status" SET DEFAULT 'notStarted',
+ALTER COLUMN "priority" SET DEFAULT 'low';
